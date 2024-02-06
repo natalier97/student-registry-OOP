@@ -38,6 +38,7 @@ class Student:
     @get_grade.setter
     def set_grade(self,new_grade): 
         if isinstance(new_grade, str) and new_grade == '9th' or new_grade == '10th' or new_grade == '11th' or new_grade == '12th':
+        #if re.match(r('9|10|11|12)th$', grade):
             self._grade = new_grade
         else:
             print('not a valid grade')
